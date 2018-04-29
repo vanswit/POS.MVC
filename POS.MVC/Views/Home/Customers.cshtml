@@ -1,0 +1,30 @@
+﻿@model IEnumerable<POS.BL.Customer>
+
+@{
+    ViewBag.Title = "Customers";
+}
+
+
+
+<h2>@ViewBag.Title</h2>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(customerItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(customerItem => item.FirstName)
+        </td>
+    </tr>
+}
+<div>
+    <p>
+
+       
+    </p>
+</div>
+
+
+
