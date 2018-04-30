@@ -1,5 +1,5 @@
 ﻿using POS.BL;
-using POS.EF;
+using POS.MVC;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +17,16 @@ namespace POS.MVC.Controllers
                 var customersList = context.Customers.ToList();
                 return View(customersList);
             }  
+        }
+
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        public ActionResult Index()
+        {
+            return View();
         }
     }
 }

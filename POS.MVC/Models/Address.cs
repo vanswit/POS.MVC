@@ -8,6 +8,7 @@
         public string PostalCode { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
+        private string FullAddress;
 
         public Address()
         {
@@ -22,11 +23,24 @@
             PostalCode = postalCode;
             City = city;
             Country = country;
+            FullAddress = AddressLine1 + " " + AddressLine2 + " " + City + ", " + Country;
+        }
+
+        public override string ToString()
+        {
+            return AddressLine1 + " " + AddressLine2 + " " + City + ", " + Country;
         }
 
         public override bool Validate()
         {
             return IsValid;
         }
+
+        public string fullAddress
+        {
+            get { return AddressLine1 + " " + AddressLine2 + " " + City + ", " + Country; }
+        }
+
+
     }
 }

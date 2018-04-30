@@ -8,7 +8,7 @@ using POS.BL;
 using System.Collections;
 using System.Linq.Expressions;
 
-namespace POS.EF
+namespace POS.MVC
 {
     public class POSContext : DbContext, IDisposable
     {

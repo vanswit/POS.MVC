@@ -13,26 +13,23 @@ namespace POS.BL
         public string FirstName { get; set; }
         public Address Address { get; set; }
         public string EmailAddress { get; set; }
-        public string FullName { get; }
 
         public Customer()
         {
             
         }
 
-        public Customer(int id, string lastName, string firstName, Address address, string emailAddress)
+        public Customer(string lastName, string firstName, Address address, string emailAddress)
         {
-            Id = id;
             LastName = lastName;
             FirstName = firstName;
             Address = address;
             EmailAddress = emailAddress;
-            FullName = FirstName + " " + LastName;
         }
 
         public override string ToString()
         {
-            return Id + " " + FirstName + " " + LastName;
+            return FirstName + " " + LastName;
         }
 
         public override bool Validate()
